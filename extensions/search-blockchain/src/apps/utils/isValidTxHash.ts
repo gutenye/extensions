@@ -2,6 +2,7 @@ import { base58 } from "@scure/base";
 
 const coins: Record<string, IsValidTxHash> = {
   Solana: solIsValidTxHash,
+  Algorand: algoIsValidTxHash,
 };
 
 export function isValidTxHash(coin: string, query: string) {
@@ -18,6 +19,10 @@ function solIsValidTxHash(query: string) {
   } catch {
     return false;
   }
+}
+
+function algoIsValidTxHash(query: string) {
+  return query.length === 52;
 }
 
 const DEFAULT_TX_HASH_REGEX = /^[0-9a-fA-F]{64}$/;

@@ -11,6 +11,7 @@ import subscan from "./Subscan";
 import tronscan from "./Tronscan";
 import xmr from "./Xmr";
 import xrpscan from "./Xrpscan";
+import pera from "./Pera";
 import invariant from "tiny-invariant";
 import type { App } from "#/types";
 
@@ -28,6 +29,7 @@ const apps: Record<string, App> = {
   Tron: tronscan,
   Monero: xmr,
   XRP: xrpscan,
+  Algorand: pera,
 };
 
 export function getApp(name: string) {

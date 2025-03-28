@@ -191,6 +191,20 @@
           "required": true
         }
       ]
+    },
+    {
+      "name": "algorand-command",
+      "title": "Search Algorand (ALGO) Blockchain Explorer",
+      "description": "Search Blockchain Explorer",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "query",
+          "placeholder": "Query",
+          "type": "text",
+          "required": true
+        }
+      ]
     }
   ],
   "dependencies": {
